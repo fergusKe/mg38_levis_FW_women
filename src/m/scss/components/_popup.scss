@@ -1,0 +1,178 @@
+/* 產品大圖 */
+.popup.product_view {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+}
+
+.popup.product_view .popup-bg {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.85;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+}
+
+.popup.product_view .popup-content {
+  position: absolute;
+  display: block;
+}
+
+.product_view .popup-content {
+  width: 750px;
+  height: 750px;
+  background: #f2f2f2;
+  left: 0;
+  right: 0;
+  top: 85px;
+  /* bottom: 0; */
+  margin: auto;
+}
+
+.product_view .popup-content .product_bigImg {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  overflow: hidden;
+}
+
+.product_view .popup-content a {
+  cursor: pointer;
+}
+
+.product_view .popup-content a.closebtn {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  right: 12px;
+  top: 12px;
+  background: url(../images/pp-close-block.png) 0 0 no-repeat;
+  text-indent: -9999px;
+  z-index: 100;
+}
+
+.product_view .popup-content a.rightBtn {
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 200px;
+  right: -150px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  background: url(../images/pp-next-big.png) 50% 50% no-repeat;
+  text-indent: -9999px;
+  z-index: 100;
+}
+
+.product_view .popup-content a.leftBtn {
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 200px;
+  left: -150px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  background: url(../images/pp-back-big.png) 50% 50% no-repeat;
+  text-indent: -9999px;
+  z-index: 100;
+}
+
+.product_view .popup-content .product_bigImg img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.product_view .popup-content .link-btn {
+	position: absolute;
+	// width: 217px;
+	// height: 59px;
+	width: 100%;
+  text-align: center;
+	bottom: 90px;
+	font-size: 24px;
+	font-family: "NotoSansTC-Bold";
+	letter-spacing: 1px;
+	// right: 65px;
+	// background: url('../images/btn-store.png');
+	// transform: scale(1.3);
+}
+
+.mobile .product_view .popup-content {
+  width: 640px;
+  height: 743px;
+  background: none;
+}
+.mobile .product_view .popup-content img {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.mobile .product_view a.closebtn {
+  top: -71px;
+  background: url(../images/pp-close-white.png) 0 0 no-repeat;
+}
+.mobile .product_view .popup-content a.leftBtn {
+  display: none;
+  width: 80px;
+  left: -80px;
+}
+.mobile .product_view .popup-content a.rightBtn {
+  display: none;
+  width: 80px;
+  right: -80px;
+}
+.mobile .product_view .popup-content .page {
+  position: absolute;
+  top: -53px;
+  left: 10px;
+  color: #FFF;
+  font-size: 32px;
+  letter-spacing: 5px;
+}
+.mobile .product_view .popup-content .product_bigImg {
+  background: none;
+}
+
+.product_view .popup-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-top: 125px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 830px;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.product_view .popup-close-btn {
+  position: absolute;
+  top: 85px;
+  right: 0;
+  width: 56px;
+  height: 59px;
+  background: url(../images/pp-close-white.png) no-repeat;
+  z-index: 1;
+}
+.product_view .popup-close-btn img {
+  width: 100%;
+}

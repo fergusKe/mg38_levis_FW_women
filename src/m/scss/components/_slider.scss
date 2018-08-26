@@ -1,0 +1,67 @@
+$dot-color: rgba(255, 255, 255, 1);
+$dot-active-color: #c70025;
+
+$width: 640px;
+.slider {
+  position: relative;
+  width: $width;
+  // height: 656px;
+  margin: 0 auto;
+  .slider-main {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    // height: 690px;
+    font-size: 0;
+    margin: 0 auto;
+    .slider-normalize {
+      position: relative;
+    }
+    .slider-content {
+      position: relative;
+      width: 99999px;
+      > li {
+        display: inline-block;
+        width: $width;
+        height: 593px;
+        vertical-align: top;
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    // top: 50%;
+    // left: 22px;
+    z-index: 1;
+    // &.prev-btn {
+    //   @include bg('../images/slider-arrow.png', 1/2);
+    // }
+    // &.next-btn {
+    //   @include bg('../images/slider-arrow.png', 1/2);
+    //   @include bgPosition('../images/slider-arrow.png', 0, -1/2);
+    //   right: 22px;
+    //     left: auto;
+    // }
+  }
+  .dotNav{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    li{
+      background-color: rgba(255, 255, 255, 1);
+      // box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, .6);
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      transition: .3s;
+      & ~li {
+        margin-left: 20px;
+      }
+    }
+    .active{
+      background-color:  $dot-active-color;
+    }
+  }
+}

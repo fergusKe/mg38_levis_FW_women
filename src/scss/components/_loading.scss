@@ -1,0 +1,195 @@
+#preLoading {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	text-align: center;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	transition: -webkit-transform 0s cubic-bezier(.215,.61,.355,1) 0s;
+	transition: transform 0s cubic-bezier(.215,.61,.355,1) 0s;
+	transition: transform 0s cubic-bezier(.215,.61,.355,1) 0s,-webkit-transform 0s cubic-bezier(.215,.61,.355,1) 0s
+}
+
+#preLoading.isFirst span,#preLoading.showLoading span {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0)
+}
+
+#preLoading.hideLoading {
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	transition: -webkit-transform 0s cubic-bezier(.215,.61,.355,1) .6s;
+	transition: transform 0s cubic-bezier(.215,.61,.355,1) .6s;
+	transition: transform 0s cubic-bezier(.215,.61,.355,1) .6s,-webkit-transform 0s cubic-bezier(.215,.61,.355,1) .6s
+}
+
+#preLoading.hideLoading .line-01,#preLoading.hideLoading .line-02,#preLoading.hideLoading .line-03,#preLoading.hideLoading .line-04,#preLoading.hideLoading .line-05,#preLoading.hideLoading .line-06,#preLoading.hideLoading .line-07,#preLoading.hideLoading .line-08,#preLoading.hideLoading .line-09,#preLoading.hideLoading .line-10 {
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0)
+}
+
+#preLoading.hideLoading.notTop {
+	transition: -webkit-transform 0s cubic-bezier(.215,.61,.355,1) .95s;
+	transition: transform 0s cubic-bezier(.215,.61,.355,1) .95s;
+	transition: transform 0s cubic-bezier(.215,.61,.355,1) .95s,-webkit-transform 0s cubic-bezier(.215,.61,.355,1) .95s
+}
+
+#preLoading.hideLoading.notTop .line-01 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) .55s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .55s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .55s,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) .55s
+}
+
+#preLoading.hideLoading.notTop .line-02 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) .5s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .5s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .5s,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) .5s
+}
+
+#preLoading.hideLoading.notTop .line-03 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) .45s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .45s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .45s,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) .45s
+}
+
+#preLoading.hideLoading.notTop .line-04 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) .4s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .4s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .4s,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) .4s
+}
+
+#preLoading.hideLoading.notTop .line-05 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) .35s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .35s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .35s,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) .35s
+}
+
+#preLoading.hideLoading.notTop .line-06 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) .2s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .2s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .2s,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) .2s
+}
+
+#preLoading.hideLoading.notTop .line-07 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) .15s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .15s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .15s,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) .15s
+}
+
+#preLoading.hideLoading.notTop .line-08 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) .1s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .1s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) .1s,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) .1s
+}
+
+#preLoading.hideLoading.notTop .line-09 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) 50ms;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) 50ms;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) 50ms,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) 50ms
+}
+
+#preLoading.hideLoading.notTop .line-10 {
+	transition: -webkit-transform .4s cubic-bezier(.215,.61,.355,1) 0s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) 0s;
+	transition: transform .4s cubic-bezier(.215,.61,.355,1) 0s,-webkit-transform .4s cubic-bezier(.215,.61,.355,1) 0s
+}
+
+/* #preLoading.hideLoading span {
+	opacity: 0;
+	-webkit-transform: translateY(-50px);
+	transform: translateY(-50px)
+} */
+
+#preLoading.hideLoading .loading-percent {
+	opacity: 0;
+	-webkit-transform: translateY(-80%);
+	transform: translateY(-80%);
+}
+
+#preLoading .line-01,#preLoading .line-02,#preLoading .line-03,#preLoading .line-04,#preLoading .line-05,#preLoading .line-06,#preLoading .line-07,#preLoading .line-08,#preLoading .line-09,#preLoading .line-10 {
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	left: 0;
+	background-color: #fff;
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	transition: -webkit-transform 0s cubic-bezier(.215,.61,.355,1);
+	transition: transform 0s cubic-bezier(.215,.61,.355,1);
+	transition: transform 0s cubic-bezier(.215,.61,.355,1),-webkit-transform 0s cubic-bezier(.215,.61,.355,1)
+}
+
+#preLoading .line-10 {
+	top: 0
+}
+
+#preLoading .line-09 {
+	top: 10%
+}
+
+#preLoading .line-08 {
+	top: 20%
+}
+
+#preLoading .line-07 {
+	top: 30%
+}
+
+#preLoading .line-06 {
+	top: 40%
+}
+
+#preLoading .line-05 {
+	top: 50%
+}
+
+#preLoading .line-04 {
+	top: 60%
+}
+
+#preLoading .line-03 {
+	top: 70%
+}
+
+#preLoading .line-02 {
+	top: 80%
+}
+
+#preLoading .line-01 {
+	top: 90%
+}
+
+#preLoading p {
+	width: 100%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	/* font-family: abril-fatface,a-otf-gothic-bbb-pr6n,sans-serif; */
+	/* font-family: 'Abril Fatface', cursive; */
+	font-family: 'Noto Sans', sans-serif;
+	/* font-size: 7.2rem;
+	letter-spacing: .025em; */
+	font-size: 72px;
+	letter-spacing: 2px;
+	text-align: center;
+	z-index: 1;
+	transition: opacity .6s cubic-bezier(.215,.61,.355,1),-webkit-transform .6s cubic-bezier(.215,.61,.355,1);
+	transition: opacity .6s cubic-bezier(.215,.61,.355,1),transform .6s cubic-bezier(.215,.61,.355,1);
+	transition: opacity .6s cubic-bezier(.215,.61,.355,1),transform .6s cubic-bezier(.215,.61,.355,1),-webkit-transform .6s cubic-bezier(.215,.61,.355,1);
+}
+
+#preLoading p span {
+	display: block;
+	opacity: 0;
+	-webkit-transform: translateY(50px);
+	transform: translateY(50px);
+	/* transition: opacity .6s cubic-bezier(.215,.61,.355,1),-webkit-transform .6s cubic-bezier(.215,.61,.355,1);
+	transition: opacity .6s cubic-bezier(.215,.61,.355,1),transform .6s cubic-bezier(.215,.61,.355,1);
+	transition: opacity .6s cubic-bezier(.215,.61,.355,1),transform .6s cubic-bezier(.215,.61,.355,1),-webkit-transform .6s cubic-bezier(.215,.61,.355,1) */
+}
