@@ -93,20 +93,20 @@
 			'images/s7/WOMEN/12_17369-0201.jpg'
 		]
 		let imgUrl = '';
-    for (var i = 1; i <= 12; i++) {
-			imgUrl = 'images/product_men/men_Jeans_roll/' + Fun.str_pad(i, 2, "0") + '.jpg';
+    for (var i = 1; i <= 10; i++) {
+			imgUrl = 'images/product_women/wommen_Jeans_must/' + Fun.str_pad(i, 2, "0") + '.jpg';
 			_sliderObj.imgMenArr.push(imgUrl);
 			_sliderObj.imgMenLoadArr.push(false);
 		}
 
-		for (var i = 1; i <= 6; i++) {
-			imgUrl = 'images/product_men/men_Jeans_stacked/' + Fun.str_pad(i, 2, "0") + '.jpg';
+		for (var i = 1; i <= 16; i++) {
+			imgUrl = 'images/product_women/wommen_Jeans_high/' + Fun.str_pad(i, 2, "0") + '.jpg';
 			_sliderObj.imgWomenArr.push(imgUrl);
 			_sliderObj.imgWomenLoadArr.push(false);
 		}
 
-		for (var i = 1; i <= 16; i++) {
-			imgUrl = 'images/product_men/men_top/' + Fun.str_pad(i, 2, "0") + '.jpg';
+		for (var i = 1; i <= 19; i++) {
+			imgUrl = 'images/product_women/women_top/' + Fun.str_pad(i, 2, "0") + '.jpg';
 			_sliderObj.imgS5Arr.push(imgUrl);
 			_sliderObj.imgS5LoadArr.push(false);
 		}

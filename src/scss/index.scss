@@ -440,6 +440,20 @@ img {
         height: 579px;
 				position: relative;
 				// padding-top: 84px;
+				.activeity-end {
+					position: absolute;
+					top: 40%;
+					left: 50%;
+					-moz-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					-webkit-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+					color: #fff;
+					font-size: 50px;
+					line-height: 1em;
+					width: 100%;
+					text-align: center;
+				}
 			}
 			.store-list-box {
 				padding-left: 220px;
@@ -512,7 +526,10 @@ img {
 					&:hover {
 						background-position: 0 -47px;
 					}
-        }
+				}
+				.address {
+					line-height: 22px;
+				}
       }
     }
   }
