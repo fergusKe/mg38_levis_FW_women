@@ -1,4 +1,8 @@
 /* 產品大圖 */
+.popup {
+	background: #000;
+}
+
 .popup.product_view {
   position: fixed;
   display: none;
@@ -187,4 +191,10 @@
 }
 .product_view .popup-close-btn img {
   width: 100%;
+}
+
+@media only screen and (max-height: 810px) {
+	.popup.product_view .popup-content {
+		position: relative;
+	}
 }

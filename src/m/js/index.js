@@ -1,8 +1,6 @@
 (function ($) {
   $(function () {
     loading()
-		// ® 的樣式設定
-		// _obj.apiPara.listItem.text_en = _obj.apiPara.listItem.text_en.replace(/®/g, '<span class="registered">®</span>')
 	});
 
   function loading() {
@@ -33,11 +31,18 @@
           overflowY: 'auto'
         });
 
+				checkHashtag();
         setButton();
 				eventListener();
 				slider();
       }
     });
+	}
+
+	function checkHashtag() {
+		if (location.hash === '#anniversary') {
+			goToAnniversary();
+		}
 	}
 
 	function slider() {
@@ -64,16 +69,28 @@
       y: 50
 		});
 		
-  }
+		$('.propaganda').on('click', function() {
+			goToAnniversary();
+		})
+	}
+	
+	function goToAnniversary() {
+		let headerH = 72;
+
+		$('html, body').animate({
+			scrollTop: $('.s7').offset().top - headerH - 20
+		}, 500);
+	}
 
   function eventListener() {
 		// 讓手機版一進來就看的到 s1, s2
-		$('.s1.ani, .s2.ani').addClass('active');
-		animate($('.s1.ani, .s2.ani'));
+		$('.s1.ani, .s2 .ani').addClass('active');
+		animate($('.s1.ani, .s2 .ani'));
 
     $(window).scroll(function () {
-			let windowHeight = $(window).height();
-			let scrollTop = $(window).scrollTop();
+			let $window = $(window);
+			let windowHeight = $window.height();
+			let scrollTop = $window.scrollTop();
 			let scrollPosition = scrollTop + windowHeight;
 			let distance = 200;
 

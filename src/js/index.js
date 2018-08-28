@@ -1,8 +1,6 @@
 (function ($) {
   $(function () {
     loading()
-		// ® 的樣式設定
-		// _obj.apiPara.listItem.text_en = _obj.apiPara.listItem.text_en.replace(/®/g, '<span class="registered">®</span>')
 	});
 
   function loading() {
@@ -32,11 +30,72 @@
           overflowY: 'auto'
         });
 
-        setButton();
+				checkHashtag();
+				setButton();
+				setBtnPosition();
 				eventListener();
 				slider();
       }
     });
+	}
+
+	function checkHashtag() {
+		if (location.hash === '#anniversary') {
+			goToAnniversary();
+		}
+	}
+
+	function setBtnPosition() {
+		let $window = $(window)
+		let windowW = $window.width();
+		let windowH = $window.height();
+		let headerH = 86;
+		let bannerH = 588;
+		console.log('windowW = ', windowW);
+
+		if (windowW < 1444) {
+			$('.propaganda').css({
+				right: 0
+			});
+		} else {
+			$('.propaganda').css({
+				right: -67
+			});
+		}
+		if (windowW < 1385) {
+			$('.men-btn').css({
+				left: 0
+			});
+		} else {
+			$('.men-btn').css({
+				left: -26
+			});
+		}
+
+		let limitH = 685
+		let menBtnTop = 500
+		let propagandaBox = 514
+		if (windowH < limitH) {
+			console.log('low');
+			let diff = limitH - windowH
+			$('.men-btn').css({
+				top: menBtnTop - diff
+			})
+
+			$('.propaganda-box').css({
+				top: propagandaBox - diff
+			})
+		} else {
+			$('.men-btn').css({
+				top: menBtnTop
+			})
+
+			$('.propaganda-box').css({
+				top: propagandaBox
+			})
+		}
+		// console.log('windowW = ', windowW);
+		console.log('windowH = ', windowH);
 	}
 
 	function slider() {
@@ -67,16 +126,29 @@
       y: 50
 		});
 		
-  }
+		$('.propaganda').on('click', function() {
+			goToAnniversary();
+		})
+	}
+	
+	function goToAnniversary() {
+		let headerH = 86;
+
+		$('html, body').animate({
+			scrollTop: $('.s7').offset().top - headerH - 20
+		}, 500);
+	}
 
   function eventListener() {
 		// 讓手機版一進來就看的到 s1, s2
-		$('.s1.ani, .s2.ani').addClass('active');
-		animate($('.s1.ani, .s2.ani'));
+		$('.s1.ani, .s2 .ani').addClass('active');
+		animate($('.s1.ani, .s2 .ani'));
 
     $(window).scroll(function () {
-			let windowHeight = $(window).height();
-			let scrollTop = $(window).scrollTop();
+			let $window = $(window);
+			let scrollLeft = $window.scrollLeft();
+			let windowHeight = $window.height();
+			let scrollTop = $window.scrollTop();
 			let scrollPosition = scrollTop + windowHeight;
 			let distance = 200;
 
@@ -87,6 +159,11 @@
 					animate($this);
 				}
 			});
+
+			$('.propaganda').css({
+				right: scrollLeft
+			})
+			
 		}).scroll();
   }
 
