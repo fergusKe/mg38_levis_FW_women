@@ -108,9 +108,9 @@ img {
 }
 
 .propaganda-box {
-	position: absolute;
+	position: fixed;
 	width: 145px;
-	top: 665px;
+	top: 686px;
 	// left: 0;
 	right : 0;
 	// margin: 0 auto;
@@ -197,7 +197,7 @@ img {
 		position: absolute;
 		width: 85px;
     height: 38px;
-		top: 423px;
+		top: 442px;
 		left: 426px;
 		background: url('../images/s3/btn-txt.png') 0 0 no-repeat;
 		// &:hover {
@@ -208,7 +208,7 @@ img {
 		position: absolute;
 		width: 85px;
     height: 38px;
-		top: 710px;
+		top: 730px;
 		left: 150px;
 		background: url('../images/s3/btn-txt.png') 0 0 no-repeat;
 		// &:hover {
