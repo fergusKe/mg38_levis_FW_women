@@ -28,9 +28,9 @@
 		
 		var pname = window.location.pathname.split('/')[1];
 		if(pname=='!!levis_demo02'){
-			_url = window.location.hostname+'/!!levis_demo02/2018fw_men_collection/';
+			_url = window.location.hostname+'/!!levis_demo02/2018fw_women_collection/';
 		}else{
-			_url = window.location.hostname+'/2018fw_men_collection/';
+			_url = window.location.hostname+'/2018fw_women_collection/';
 		}
 		
 		// --- 周年慶據點 ---
