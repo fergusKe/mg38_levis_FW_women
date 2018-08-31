@@ -1,4 +1,6 @@
 (function ($) {
+	let accessToken =
+    '?access_token=1824265323.e05d78c.fa56b78736c641e586cd39f188214073';
   $(function () {
     loading()
 	});
@@ -35,8 +37,44 @@
 				setBtnPosition();
 				eventListener();
 				slider();
+				setIg();
       }
     });
+	}
+
+	function setIg() {
+		$.get(
+      'https://api.instagram.com/v1/users/self/media/recent/' + accessToken,
+      function (data) {
+        data.data.map(function (item) {
+          let img = document.createElement('img');
+          img.src = item.images.low_resolution.url;
+          let html = `
+            <div class="swiper-slide bg-cover" style="background-image: url(${
+              item.images.standard_resolution.url
+            })">
+              <a megais_ga="eventlogotee_ig_photo" href="${item.link}" target="_blank"></a>
+            </div>
+          `;
+          $('.s8-slider .swiper-wrapper').append(html);
+				});
+
+        let s8slider = new Swiper('.s8-slider', {
+          slidesPerView: 5,
+          spaceBetween: 30,
+          slidesPerGroup: 5,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }
+				});
+				
+				Fun.tracking()
+      },
+      'json'
+    );
 	}
 
 	function checkHashtag() {
@@ -125,10 +163,6 @@
       alpha: 0,
       y: 50
 		});
-		
-		$('.propaganda').on('click', function() {
-			goToAnniversary();
-		})
 	}
 	
 	function goToAnniversary() {

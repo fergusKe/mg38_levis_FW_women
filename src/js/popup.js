@@ -223,7 +223,7 @@
         return newArr;
     }
 
-    $('.s3 .roll-btn').on('click', function() {
+    $('.s3 .roll-btn-box').on('click', function() {
 			_sliderObj.type = 's3-roll-btn';
 			_sliderObj.imgArr = _sliderObj.imgMenArr;
 			_sliderObj.imgLoadArr = _sliderObj.imgMenLoadArr;
@@ -232,7 +232,7 @@
 			setPage();
 			$('.product_view').fadeIn();
 		});
-		$('.s3 .stack-btn').on('click', function() {
+		$('.s3 .stack-btn-box').on('click', function() {
 				_sliderObj.type = 's3-stack-btn';
         _sliderObj.imgArr = _sliderObj.imgWomenArr;
         _sliderObj.imgLoadArr = _sliderObj.imgWomenLoadArr;
