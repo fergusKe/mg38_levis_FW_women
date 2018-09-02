@@ -81,7 +81,7 @@
 		<div class="container cont">
 			<div class="propaganda-box">
 				<div class="propaganda">
-					<a target="_blank" href="http://bit.ly/2olwVSj">
+					<a megais_ga="event2018fw_women_飛船" target="_blank" href="http://bit.ly/2olwVSj">
 						<img src="./images/propaganda.png" alt="" />
 					</a>
 				</div>
@@ -89,7 +89,7 @@
 			<div class="section s1 ani">
 				<img src="./images/s1/banner.png" alt="" />
 				<div class="men-btn">
-					<a target="_blank" href="https://www.levi.com.tw/!!levis_demo02/2018fw_men_collection">
+					<a megais_ga="event2018fw_women_s1_全新男裝" target="_blank" href="https://www.levi.com.tw/!!levis_demo02/2018fw_men_collection">
 						<img src="./images/s1/btn-men.png" alt="" />
 					</a>
 				</div>
@@ -100,8 +100,8 @@
 				</div>
 				<div class="cont ani">
 					<img src="./images/s2/pic.png" alt="" />
-					<div class="video">
-						<iframe width="458" height="288" src="https://www.youtube.com/embed/WUdzrj8W4P0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="video" megais_ga="event2018fw_women_s2_youtube">
+						<div id="player1"></div>
 					</div>
 				</div>
 			</div>
@@ -112,13 +112,13 @@
 				<div class="cont ani">
 					<img src="./images/s3/pic.png" alt="" />
 					<div class="slider-btn">
-						<a target="_blank" href="https://www.levi.com.tw/fitguide.html#women
+						<a megais_ga="event2018fw_women_s3_版型解密" target="_blank" href="https://www.levi.com.tw/fitguide.html#women
 						"></a>
 					</div>
-					<div class="roll-btn-box">
+					<div class="roll-btn-box" megais_ga="event2018fw_women_s3_摩登捲折">
 						<div class="roll-btn"></div>
 					</div>
-					<div class="stack-btn-box">
+					<div class="stack-btn-box" megais_ga="event2018fw_women_s3_窄腳積褲">
 						<div class="stack-btn"></div>
 					</div>
 					<div class="swiper-container s3-slider">
@@ -197,7 +197,7 @@
 					<!-- Add Pagination -->
 					<div class="swiper-pagination"></div>
 					<div class="more-btn">
-						<a href="javascript:;"></a>
+						<a megais_ga="event2018fw_women_s5_了解更多" href="javascript:;"></a>
 					</div>
 				</div>
 			</div>
@@ -205,7 +205,7 @@
 				<div class="cont">
 					<img src="./images/s6/pic.png" alt="" />
 					<div class="btn"></div>
-					<a href="./images/book/01.jpg" data-fancybox="item1"></a>
+					<a megais_ga="event2018fw_women_s6_秋冬穿搭潮流雜誌" href="./images/book/01.jpg" data-fancybox="item1"></a>
 				</div>
 				<!--item1 gallery-->
 				<div class="gallery">
@@ -247,7 +247,7 @@
 								</div>
 							</form>
 							<div class="item btn">
-								<button class="search_btn" megais_ga="eventWomen_page6_search">
+								<button class="search_btn" megais_ga="event2018fw_women_s7_門市搜尋">
 									<!-- <span>搜 尋</span> -->
 								</button>
 							</div>
@@ -265,16 +265,16 @@
 			<div class="section s8 s-ig ani">
 				<div class="title">
 					<img src="./images/s8/title.png" />
-					<a target="_blank" href="https://www.instagram.com/explore/tags/liveinlevis/" class="liveInLevis"></a>
+					<a megais_ga="event2018fw_women_s8_ig_liveInLevis" target="_blank" href="https://www.instagram.com/explore/tags/liveinlevis/" class="liveInLevis"></a>
 				</div>
 				<div class="ig-wrap">
 					<div class="more-btn">
-						<a target="_blank" megais_ga="eventlogotee_ig_立即追蹤" href="https://www.instagram.com/levis_taiwan/">立即追蹤 >></a>
+						<a target="_blank" megais_ga="event2018fw_women_s8_ig_立即追蹤" href="https://www.instagram.com/levis_taiwan/">立即追蹤 >></a>
 					</div>
 					<div class="swiper-container s8-slider">
 						<div class="swiper-wrapper"></div>
-						<div megais_ga="eventlogotee_ig_nextBtn" class="swiper-button-next"></div>
-						<div megais_ga="eventlogotee_ig_prevBtn" class="swiper-button-prev"></div>
+						<div class="swiper-button-next" megais_ga="event2018fw_women_s8_ig_nextBtn"></div>
+						<div class="swiper-button-prev" megais_ga="event2018fw_women_s8_ig_prevBtn"></div>
 					</div>
 				</div>
 			</div>
@@ -298,6 +298,41 @@
 		<!-- FOOTER -->
 		<div class="footer"></div>
 	</div>
+	<script>
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		var player1, player2, player3;
+		function onYouTubeIframeAPIReady() {
+			console.log('onYouTubeIframeAPIReady');
+			player1 = new YT.Player('player1', {
+				width: '458',
+				height: '288',
+				videoId: 'WUdzrj8W4P0',
+				playerVars: { rel: 0 },
+				events: {
+					'onStateChange': onPlayerStateChange
+				}
+			});
+		}
+
+		function onPlayerStateChange(event) {
+			// 播放狀態時
+			if (event.data === 1) {
+				var $ele = $(event.target.a);
+				// 只會觸發一次，避免每次播放時重複觸發
+				if ($ele.data('event') === 'tracking') return;
+
+				$ele.data('event', 'tracking')
+				let trackStr = $(event.target.a).parent().attr('megais_ga');
+				console.log('trackStr = ', trackStr);
+				window.trackingEvent(trackStr, "click");
+			}
+		}
+	</script>
 </body>
 
 </html>

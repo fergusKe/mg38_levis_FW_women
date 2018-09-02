@@ -53,7 +53,7 @@
             <div class="swiper-slide bg-cover" style="background-image: url(${
               item.images.standard_resolution.url
             })">
-              <a megais_ga="eventlogotee_ig_photo" href="${item.link}" target="_blank"></a>
+              <a megais_ga="event2018fw_women_s8_ig_photo" href="${item.link}" target="_blank"></a>
             </div>
           `;
           $('.s8-slider .swiper-wrapper').append(html);
