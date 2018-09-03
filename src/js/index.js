@@ -80,6 +80,9 @@
 	function checkHashtag() {
 		if (location.hash === '#anniversary') {
 			goToAnniversary();
+			let $ani = $('.ani');
+			$ani.addClass('active');
+			animate($ani);
 		}
 	}
 
